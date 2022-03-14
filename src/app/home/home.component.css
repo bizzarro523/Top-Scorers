@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Parisienne|Quicksand&display=swap");
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-image: url("https://cdn.dnaindia.com/sites/default/files/styles/full/public/2018/12/03/760775-742313-uefa.jpg");
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+}
+.header {
+  position: absolute;
+  height: auto;
+  width: 100%;
+  top: 10%;
+  transform: translateY(-50%);
+  text-align: center;
+  font-family: "RacingSansOne", sans-serif;
+  font-size: 48px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.select {
+  padding: 9px;
+  text-align: center;
+  border: solid 1px #517b97;
+  outline: 0;
+  width: 300px;
+  height: 50px;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left 25,
+    from(#ffffff),
+    color-stop(4%, #cad9e3),
+    to(#ffffff)
+  );
+  background: -moz-linear-gradient(top, #ffffff, #cad9e3 1px, #ffffff 25px);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+}
+
+.drops {
+  height: auto;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.drops {
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  font-family: "cinzel", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  display: block;
+  height: auto;
+  width: 150px;
+  padding: 10px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1%;
+  border-radius: 2px;
+  transition: 0.5s ease-in-out;
+}
+
+/* CSS */
+.goButton {
+  background-color: #ffffff;
+  border: 1px solid #222222;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #222222;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+    "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  padding: 13px 23px;
+  position: relative;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  text-decoration: none;
+  width: auto;
+}
+
+.goButton:focus-visible {
+  box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+  transition: box-shadow 0.2s;
+}
+
+.goButton:active {
+  background-color: #f7f7f7;
+  border-color: #000000;
+}
+
+.goButton:disabled {
+  border-color: #dddddd;
+  color: #dddddd;
+  cursor: not-allowed;
+  opacity: 1;
+}

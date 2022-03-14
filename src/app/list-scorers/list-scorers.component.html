@@ -1,0 +1,44 @@
+<body>
+  <div class="container">
+    <h2>
+      Top Scorers in {{ players[0].statistics[0].league.name }}({{ seasonId }})
+    </h2>
+    <h5>(Click on player for more stats)</h5>
+    <a id="home" routerLink="/home">Home</a>
+    <div class="row" id="ads" style="row-gap: 40px">
+      <div class="col-md-4" *ngFor="let player of players">
+        <div
+          class="card rounded"
+          (click)="getPlayer(player.player.id)"
+          style="width: 19rem"
+        >
+          <div class="card-image">
+            <span class="card-notify-badge">{{ player.player.name }}</span>
+            <span class="card-notify-club"
+              ><img
+                class="img-fluid"
+                src="{{ player.statistics[0].team.logo }}"
+                alt="Alternate Text"
+            /></span>
+            <img
+              class="card-img-top"
+              src="{{ player.player.photo }} "
+              alt="Alternate Text"
+            />
+          </div>
+          <div class="card-image-overlay m-auto">
+            <span class="card-detail-badge"
+              >Goals: {{ player.statistics[0].goals.total }}</span
+            >
+            <span class="card-detail-badge">{{
+              player.statistics[0].team.name
+            }}</span>
+            <span class="card-detail-badge">{{
+              player.player.nationality
+            }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

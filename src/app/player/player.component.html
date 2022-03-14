@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div class="container">
+      <a id="home" routerLink="/home">Home</a>
+      <div class="row">
+        <div class="column">
+          <img src="{{ playerInfo.photo }}" alt="" />
+        </div>
+        <div class="column">
+          <table class="table">
+            <tbody>
+              <tr>
+                <th scope="row">Name</th>
+                <td>{{ playerInfo.name }}</td>
+              </tr>
+              <tr>
+                <th scope="row">Age</th>
+                <td>{{ seasonId - (2021 - playerInfo.age) }}</td>
+              </tr>
+              <tr>
+                <th scope="row">Club</th>
+                <td colspan="2">{{ playerStats[0].team.name }}</td>
+              </tr>
+              <tr>
+                <th scope="row">Nationality</th>
+                <td colspan="2">
+                  {{ playerInfo.nationality }}
+                  <img
+                    src="{{ flagResponse.response[0].flag }}"
+                    alt=""
+                    style="width: 10%"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <table>
+      <tr>
+        <th style="width: 20%">Season: {{ seasonId }}</th>
+        <th style="width: 20%">Competition</th>
+        <th style="width: 20%">Appearences</th>
+        <th style="width: 20%">Goals</th>
+        <th style="width: 20%">Assists</th>
+      </tr>
+      <tr *ngFor="let stat of playerStats">
+        <td>
+          <img src="{{ stat.league.logo }}" style="width: 25%" alt="" />
+        </td>
+        <td>{{ stat.league.name }}</td>
+        <td>{{ stat.games.appearences }}</td>
+        <td>{{ stat.goals.total }}</td>
+        <td>{{ stat.goals.assists }}</td>
+      </tr>
+    </table>
+    <div class="label">
+      <label>Latest {{ playerStats[0].team.name }} Game</label>
+    </div>
+    <div
+      class="video"
+      style="margin: auto; height: 50%; width: 50%"
+      [innerHTML]="video | sanitizeHtml"
+    ></div>
+    <!-- {{ video }} -->
+  </body>
+</html>
